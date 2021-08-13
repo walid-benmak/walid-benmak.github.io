@@ -1,0 +1,181 @@
+body {
+    padding: 3%;
+}
+
+h2 {
+    margin-bottom: 2%;
+    font-weight: 500;
+}
+
+label {
+    display: block;
+    margin-bottom: 3%;
+    font-weight: 700;
+}
+
+#me input {
+    display: block;
+}
+
+.field {
+    display: flex;
+    margin-bottom: 6%;
+    width: 400px;
+}
+
+.container input {
+    border-radius: 5px;
+    border: 1px solid #000;
+    padding: 2%;
+    width: 200px;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.ml {
+    margin-left: 2%;
+}
+
+.btn {
+    display: block;
+    border: none;
+    border-radius: 5px;
+    min-width: 50px;
+}
+
+.btn-cta {
+    display: block;
+    border: none;
+    border-radius: 5px;
+    padding: 3% 4%;
+    margin: 5% 0;
+    font-weight: 600;
+}
+
+.warning {
+    color: #FFF;
+    background: #FF0000;  
+}
+
+.navy {
+    color: #FFF;
+    background: #000080;
+}
+
+#actions {
+    display: flex;
+}
+
+.btn-action, .btn-nav {
+    margin-right: 3%;
+}
+
+#navigation {
+    display: flex;
+    margin-bottom: 6%;
+}
+
+.break {
+    margin-bottom: 16%;
+}
+
+.btn-nav {
+    margin-right: 6%;
+    padding: 3%;
+    border: 1px solid #000;
+    border-radius: 7px;
+}
+
+.btn-nav.selected {
+    font-weight: 600;
+    color: #FFF;
+    background: #000080;
+}
+
+.popup {
+    position: fixed;
+    box-shadow: 0px 0px 1px #000;
+    border-radius: 7px;
+    height: 87%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    width: 90%;
+    z-index: 1;
+    background: #FFF;
+}
+
+.popup-header {
+    padding: 5%;
+    background: #000;
+    color: #FFF;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+.popup-header-close {
+    position: absolute;
+    right: 3%;
+    border: none;
+    background: none;
+    color: #FFF;
+    font-size: 18px;
+}
+
+.popup table input {
+    border: 0;
+    padding: 6% 3%;
+    width: 100%;
+    text-overflow: ellipsis;
+}
+
+.popup-form {
+    padding: 3%;
+}
+
+.popup-form input {
+    padding: 3%;
+    margin: 1% 0;
+}
+
+.blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(2px);
+}
+
+table {
+    width: 100%;
+    border-bottom: 1px solid #000;
+    border-spacing: 10px 10px;
+    border-collapse: separate;
+}
+
+.total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* margin: 10px 17px; */
+    margin: 10px 25px;
+    font-weight: 700;
+}
+
+th {
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+    border-bottom: 1px solid #000;
+    padding: .5rem;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <meta charset="utf-8">
+    <title>Word</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style.css">
+
+    <body>
+
+        <div id="navigation">
+            <div id="conf-link" onclick="navigate(this, 'config')" class="btn-nav selected" data-target="config">Configurar</div>
+            <div id="prev-link" onclick="navigate(this, 'preview')" class="btn-nav" data-target="preview">Previsualizar</div>
+        </div>
+
+        <div class="container">
+            <div id="config" class="tab">
+                <hr>
+                <div id="me">
+                    <div>
+                        <label for="name">&#128105;&#127995; Nombre</label>
+                        <div class="field">
+                            <input type="text" id="name" name="name" placeholder="Nombre APELLIDO" onkeyup="update('nombre', this.value)">
+                            <button class="btn warning ml" onclick="reset_field('name')">&#128581;&#127995;</button>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="name">&#128188; Puesto</label>
+                        <div class="field">
+                            <input type="text" id="position" name="position" placeholder="Puesto" onkeyup="update('puesto', this.value)">
+                            <button class="btn warning ml" onclick="reset_field('position')">&#128581;&#127995;</button>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="name">&#128241; Celular</label>
+                        <div class="field">
+                            <input type="text" id="phone" name="phone" placeholder="Celular" onkeyup="update('celular', this.value)">
+                            <button class="btn warning ml" onclick="reset_field('phone')">&#128581;&#127995;</button>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <h3>Documento</h3>
+
+                    <div>
+                        <label for="date">&#128197; Fecha</label>
+                        <div class="field">
+                            <input type="date" id="date" name="date" placeholder="Fecha" onchange="date_select(this.value)">
+                            <button class="btn navy ml" type="button" onclick="date_auto()">Hoy</button>
+                            <button class="btn warning ml" onclick="reset_field('date')">&#128581;&#127995;</button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="client">&#128378;&#127995; Cliente</label>
+                        <div class="field">
+                            <input type="text" id="client" name="client" placeholder="Cliente" onkeyup="update('cliente', this.value)">
+                            <button class="btn warning ml" onclick="reset_field('client')">&#128581;&#127995;</button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="ref">&#9997;&#127995; Referencia</label>
+                        <div class="field">
+                            <input type="text" id="ref" name="ref" placeholder="REF." onkeyup="update('referencia', this.value)">
+                            <button class="btn warning ml" onclick="reset_field('referencia')">&#128581;&#127995;</button>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <button class="btn-action btn-cta warning" onclick="modal_open()">Beneficios</button>
+        
+                    <div id="actions">
+                        <button class="btn-action btn-cta navy" onclick="save()">Guardar &#9749;</button>
+                        <button class="btn-action btn-cta warning" type="button" onclick="reset_all()">Reiniciar &#129335;&#127995;</button>
+                    </div>
+                
+                </div>
+        
+                <hr>
+            </div>
+    
+            <div id="preview" class="tab" style="display: none;">
+                <p>
+                    <span id="fecha"></span>
+                </p>
+
+                <p class="break">
+                    Señor : <br> <span id="cliente" class="bold upper"></span>
+                </p>
+
+                <p class="break">
+                    Cordial saludo.
+                </p>
+
+                <p class="break">
+                    <span class="bold">REF: </span> <span id="referencia"></span>
+                </p>
+
+                <p>
+                    De acuerdo a su solicitud presentamos la siguiente propuesta.
+                </p>
+
+                <p id="servicios"></p>
+
+                <p id="total"></p>
+
+                <p>Attentamente;</p>                
+
+                <p><span id="nombre" class="bold upper"></span></p>
+                <p><span id="puesto"></span></p>
+                <p><span id="celular"></span></p>
+
+            </div>
+        </div>
+
+    </body>
+
+    <script src="script.js"></script>
+
+</html>
